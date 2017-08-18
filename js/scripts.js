@@ -1,26 +1,31 @@
-var add = function(number1, number2) {
-  return number1 + number2;
+var numbers = function(number) {
+  var inputNumber = [];
+  for (var index = 1; index <=number; index ++) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      inputNumber.push("pingpong");
+    }
+    else if (index % 3 === 0) {
+      inputNumber.push("ping");
+    }
+    else if (index % 5 === 0) {
+      inputNumber.push("pong");
+    }
+    else {
+      inputNumber.push(index);
+    }
+  }
+
+  return inputNumber;
 };
 
-var subtract = function(number1, number2) {
-  return number1 - number2;
-};
-
-var multiply = function(number1, number2) {
-  return number1 * number2;
-};
-
-var divide = function(number1, number2) {
-  return number1 / number2;
-};
 
 $(document).ready(function() {
-  $("form#add").submit(function(event) {
+  $("form#game").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt($("#add1").val());
-    var number2 = parseInt($("#add2").val());
-    var result = add(number1, number2);
-    $("#output").text(result);
+    var number = parseInt($("#enterNumber").val());
+    //var number1 = parseInt($("#add1").val());
+    //var number2 = parseInt($("#add2").val());
+    //var result = add(number1, number2);
+    $("#output").text(number);
   });
-  var favoriteColor = $("#color").val();
 });
