@@ -22,7 +22,12 @@ $(document).ready(function() {
   $("form#game").submit(function(event) {
     event.preventDefault();
     var number = parseInt($("#enterNumber").val());
+    if(number <=0) {
+      alert("Please enter a number => 1.");
+    }
     var result = numbers(number);
-    $(".output").append("<li>"+result+"</li>");
+    for (var index=0; index <=result.length-1; index++) {
+      $("#output").append("<li>"+result[index]+"</li>");
+    };
   });
 });
