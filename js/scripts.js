@@ -26,6 +26,7 @@ $(document).ready(function() {
       alert("Please enter a number => 1.");
     }
     var result = numbers(number);
+    $("#output").empty();
     for (var index=0; index <=result.length-1; index++) {
       $("#output").append("<li>"+result[index]+"</li>");
     };
