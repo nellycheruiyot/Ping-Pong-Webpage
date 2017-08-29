@@ -16,6 +16,7 @@ A user can enter a new number and see new results over and over again.
 Here is a working live demo :  https://nellycheruiyot.github.io/Ping-Pong-Webpage/
 
 ## Features
+- utilizes BDD
 - Takes input from user
 - Uses a Javascript function to create an array containing the number 1 to the number entered by user
 - Modifies the array contents so that:
